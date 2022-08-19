@@ -1,9 +1,11 @@
 from tgridcloudewsp/ubuntui386xenialme:latest
 USER root
+RUN apt-get update && apt-get install -y git
+RUN apt-get install -y python3-pip
 MAINTAINER Private 1174185292@qq.com
 WORKDIR /usr/src
 RUN apt update
-RUN apt install cron
+RUN apt install cron -y
 RUN git clone https://github.com/orggittest/OneGuyAPI.git
 RUN pip3 install -r requirements.txt
 RUN chmod +x auto_down.sh
