@@ -1,4 +1,5 @@
 from tgridcloudewsp/ubuntui386xenialme:latest
+USER root
 MAINTAINER Private 1174185292@qq.com
 WORKDIR /usr/src
 RUN apt update
