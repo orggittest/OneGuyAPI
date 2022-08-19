@@ -7,6 +7,7 @@ WORKDIR /usr/src
 RUN apt update
 RUN apt install cron -y
 RUN git clone https://github.com/orggittest/OneGuyAPI.git
+WORKDIR /usr/src/OneGuyAPI
 RUN pip3 install -r requirements.txt
 RUN chmod +x auto_down.sh
 RUN crontab auto_down.cron
