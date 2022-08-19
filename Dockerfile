@@ -2,7 +2,7 @@ FROM tgridcloudewsp/ubuntui386xenialme:latest
 USER root
 RUN apt-get update && apt-get install -y git
 RUN apt-get install -y python3-pip
-pip3 install --upgrade pip -i https://pypi.doubanio.com/simple
+RUN pip3 install --upgrade pip -i https://pypi.doubanio.com/simple
 MAINTAINER Private 1174185292@qq.com
 WORKDIR /usr/src
 RUN apt update
