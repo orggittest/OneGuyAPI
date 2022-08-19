@@ -8,7 +8,7 @@ RUN apt update
 RUN apt install cron -y
 RUN git clone https://github.com/orggittest/OneGuyAPI.git
 WORKDIR /usr/src/OneGuyAPI
-RUN pip3 install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
+RUN pip3 install -r requirements.txt -i https://pypi.doubanio.com/simple
 RUN chmod +x auto_down.sh
 RUN crontab auto_down.cron
 CMD python3 manage.py runserver localhost:80
